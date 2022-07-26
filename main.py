@@ -1,8 +1,9 @@
 import sys
 import pygame
 from parametros import (HEIGHT, RUTA_BIRD, WINDOW_SIZE, COLOR_FONDO, FPS, RUTA_CAÑERIA, RUTA_SKYNET
-, WIDTH, HEIGHT, ANCHO_SKYNET, ALTURA_SKYNET)
+, WIDTH, HEIGHT, ANCHO_SKYNET, ALTURA_SKYNET, G)
 
+from frontend.pajaro import Skynet
 pygame.init()
 
 #Se crea la ventana, se le pine nombre y color
@@ -13,9 +14,8 @@ pygame.display.update()
 
 #Imagen cañería
 pipe = pygame.image.load(RUTA_CAÑERIA)
-#Imagen pajarito
-skynet = pygame.image.load(RUTA_SKYNET)
-
+#Se crea Skynet
+Robot = Skynet()
 
 #Se define la función principal
 def main():
@@ -24,6 +24,7 @@ def main():
     while run:
         clock = pygame.time.Clock()
         pintar_pantalla()
+        fisica()
 
         #Chequea los eventos
         for event in pygame.event.get():
@@ -31,7 +32,6 @@ def main():
 
             #Si se apreta la X se acaba el loop del juego
             if event.type == pygame.QUIT:
-                print(event == pygame.QUIT)
                 run = False
 
     pygame.quit()
@@ -39,17 +39,14 @@ def main():
 
 def pintar_pantalla():
     window.fill(COLOR_FONDO)
-    window.blit(skynet, (WIDTH/2 - int(ANCHO_SKYNET/2), 200))
+    window.blit(Robot.imagen, (Robot.x, Robot.y))
     pygame.display.update()
 
 def fisica():
-    pass
+    #gravedad
+    Robot.Vy -= G
+    Robot.mover()
 
-"""class skynet:
-    def __init__(self):
-        self.imagen = 
-        self.x = WIDTH/2 - int(ANCHO_SKYNET/2)
-        self.y = 200"""
 
 #Se corre el juego
 if __name__ == "__main__":

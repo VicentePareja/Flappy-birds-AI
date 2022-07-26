@@ -17,3 +17,7 @@ RUTA_CAÑERIA = os.path.join("frontend", "Sprites", "Cañería.png")
 RUTA_BIRD = os.path.join("frontend", "Sprites", "Pajaro.png")
 RUTA_ROJO = os.path.join("frontend", "Sprites", "Cuadrado Rojo.png")
 RUTA_SKYNET = os.path.join("frontend", "Sprites", "SKYNET.png")
+
+#Constantes
+
+G = 0.0002
