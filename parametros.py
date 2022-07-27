@@ -26,7 +26,7 @@ RUTA_SKYNET = os.path.join("frontend", "Sprites", "SKYNET.png")
 
 #Constantes
 
-G = 0.0002
+G = 0.001
 VELOCIDAD_CAÑERIAS = 0.1
 DISTANCIA_HORIZONTAL_CAÑERIAS = 2500
 DISTANCIA_VERTICAL_CAÑERIAS = 200
