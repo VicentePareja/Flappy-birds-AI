@@ -79,7 +79,10 @@ def generar_pipes():
     altura = random.randint(100,600)
     Pipes.append(Pipe(altura))
     Pipes.append(InvertedPipe(altura - DISTANCIA_VERTICAL_CAÑERIAS))
-
+    
+    if len(Pipes) >= 10:
+        Pipes.pop(0)
+        Pipes.pop(0)
 
 #Se corre el juego
 if __name__ == "__main__":
