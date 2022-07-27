@@ -1,12 +1,14 @@
 import sys
 import pygame
-from parametros import WINDOW_SIZE
+from parametros import WINDOW_SIZE, COLOR_FONDO
 
 pygame.init()
 
-
+#Se crea la ventana
 window = pygame.display.set_mode(WINDOW_SIZE)
-
+pygame.display.set_caption("Flappy_robot")
+window.fill(COLOR_FONDO)
+pygame.display.update()
 
 
 def main():
