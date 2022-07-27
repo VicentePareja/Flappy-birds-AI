@@ -31,7 +31,7 @@ def main():
         clock = pygame.time.Clock()
         pintar_pantalla()
         fisica()
-        handlekeyboard(clock)
+        run = handlekeyboard(clock)
 
 
         #Chequea los eventos
@@ -61,17 +61,19 @@ def fisica():
         print("chocaste")
 
 def handlekeyboard(clock):
-    global run
     for event in pygame.event.get():
             clock.tick(FPS)
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
                     Robot.Vy = 0.3
             if event.type == pygame.QUIT:
-                run = False
+                
+                return False
 
     for pipe in Pipes:
         pipe.mover()
+    
+    return True
 
 def generar_pipes():
     altura = random.randint(100,600)
