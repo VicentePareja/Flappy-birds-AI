@@ -1,6 +1,7 @@
 import sys
 import pygame
-from parametros import RUTA_BIRD, WINDOW_SIZE, COLOR_FONDO, FPS, RUTA_CAÑERIA
+from parametros import (HEIGHT, RUTA_BIRD, WINDOW_SIZE, COLOR_FONDO, FPS, RUTA_CAÑERIA, RUTA_SKYNET
+, WIDTH, HEIGHT, ANCHO_SKYNET, ALTURA_SKYNET)
 
 pygame.init()
 
@@ -13,7 +14,8 @@ pygame.display.update()
 #Imagen cañería
 pipe = pygame.image.load(RUTA_CAÑERIA)
 #Imagen pajarito
-bird = pygame.image.load(RUTA_BIRD)
+skynet = pygame.image.load(RUTA_SKYNET)
+
 
 #Se define la función principal
 def main():
@@ -37,12 +39,17 @@ def main():
 
 def pintar_pantalla():
     window.fill(COLOR_FONDO)
-    window.blit(bird, (200, 200))
+    window.blit(skynet, (WIDTH/2 - int(ANCHO_SKYNET/2), 200))
     pygame.display.update()
 
+def fisica():
+    pass
 
-
-
+"""class skynet:
+    def __init__(self):
+        self.imagen = 
+        self.x = WIDTH/2 - int(ANCHO_SKYNET/2)
+        self.y = 200"""
 
 #Se corre el juego
 if __name__ == "__main__":
