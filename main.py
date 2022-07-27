@@ -1,10 +1,11 @@
 import sys
 import pygame
+from parametros import WINDOW_SIZE
 
 pygame.init()
 
-SIZE = 800, 600
-window = pygame.display.set_mode(SIZE)
+
+window = pygame.display.set_mode(WINDOW_SIZE)
 
 
 
@@ -22,7 +23,7 @@ def main():
 
     pygame.quit()
 
-    
+
 
 
 #Se corre el juego
