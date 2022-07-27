@@ -1,6 +1,6 @@
 import sys
 import pygame
-from parametros import WINDOW_SIZE, COLOR_FONDO, FPS
+from parametros import RUTA_BIRD, WINDOW_SIZE, COLOR_FONDO, FPS, RUTA_CAÑERIA
 
 pygame.init()
 
@@ -10,6 +10,10 @@ pygame.display.set_caption("Flappy_robot")
 window.fill(COLOR_FONDO)
 pygame.display.update()
 
+#Imagen cañería
+pipe = pygame.image.load(RUTA_CAÑERIA)
+#Imagen pajarito
+bird = pygame.image.load(RUTA_BIRD)
 
 #Se define la función principal
 def main():
@@ -33,6 +37,7 @@ def main():
 
 def pintar_pantalla():
     window.fill(COLOR_FONDO)
+    window.blit(bird, (200, 200))
     pygame.display.update()
 
 
