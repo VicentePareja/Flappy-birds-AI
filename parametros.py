@@ -13,7 +13,7 @@ ALTURA_SKYNET = 60
 COLOR_FONDO = (200, 200, 255)
 
 #Rutas
-RUTA_CAÑERIA = os.path.join("frontend", "Sprites", "Cañería.png")
+RUTA_CAÑERIA = os.path.join("frontend", "Sprites", "Pipe.png")
 RUTA_BIRD = os.path.join("frontend", "Sprites", "Pajaro.png")
 RUTA_ROJO = os.path.join("frontend", "Sprites", "Cuadrado Rojo.png")
 RUTA_SKYNET = os.path.join("frontend", "Sprites", "SKYNET.png")

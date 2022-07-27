@@ -4,6 +4,8 @@ from parametros import (HEIGHT, RUTA_BIRD, WINDOW_SIZE, COLOR_FONDO, FPS, RUTA_C
 , WIDTH, HEIGHT, ANCHO_SKYNET, ALTURA_SKYNET, G)
 
 from frontend.pajaro import Skynet
+from frontend.pipes import Pipe
+
 pygame.init()
 
 #Se crea la ventana, se le pine nombre y color
@@ -13,7 +15,7 @@ window.fill(COLOR_FONDO)
 pygame.display.update()
 
 #Imagen cañería
-pipe = pygame.image.load(RUTA_CAÑERIA)
+Cañeria = Pipe()
 #Se crea Skynet
 Robot = Skynet()
 
@@ -40,6 +42,7 @@ def main():
 def pintar_pantalla():
     window.fill(COLOR_FONDO)
     window.blit(Robot.imagen, (Robot.x, Robot.y))
+    window.blit(Cañeria.imagen, (Cañeria.x, Cañeria.y))
     pygame.display.update()
 
 def fisica():
