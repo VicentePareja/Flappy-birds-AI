@@ -22,4 +22,9 @@ def main():
 
     pygame.quit()
 
-main()
+    
+
+
+#Se corre el juego
+if __name__ == "__main__":
+    main()
